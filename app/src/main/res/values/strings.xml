@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Detail View</string>
+    <string name="tandc">View User <font color="#3F51B5"><u>Agreement/Privacy Policy</u></font></string>
+
+</resources>
