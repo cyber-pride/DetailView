@@ -1,29 +1,31 @@
 package com.bluapp.detailview;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class Main3Activity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
-    private MainAdapter mainAdapter;
+    private Main3Adapter mainAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mRecyclerView = (RecyclerView) findViewById(R.id.list);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mainAdapter = new MainAdapter(this,getData());
+        setContentView(R.layout.activity_main3);
+        mRecyclerView = (RecyclerView) findViewById(R.id.grid);
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
+        mRecyclerView.setLayoutManager(layoutManager);
+      //  mRecyclerView.addItemDecoration(new SpaceGrid(3, 10, true));
+        mainAdapter = new Main3Adapter(Main3Activity.this, getData());
         mRecyclerView.setAdapter(mainAdapter);
 
-        RecyclerSectionItemDecoration sectionItemDecoration = new RecyclerSectionItemDecoration(getResources().getDimensionPixelSize(R.dimen.header), true, getSectionCallback(getData()));
-        mRecyclerView.addItemDecoration(sectionItemDecoration);
+
+
+
     }
 
     public ArrayList<MainData> getData() {
@@ -39,19 +41,5 @@ public class MainActivity extends AppCompatActivity {
         list.add(new MainData("Topic Header 5", R.drawable.coin_xrp, "Title 1", "SubTitle 1"));
         list.add(new MainData("Topic Header 5", R.drawable.coin_ltc, "Title 2", "SubTitle 2"));
         return list;
-    }
-
-    private RecyclerSectionItemDecoration.SectionCallback getSectionCallback(final List<MainData> people) {
-        return new RecyclerSectionItemDecoration.SectionCallback() {
-            @Override
-            public boolean isSection(int position) {
-                return position == 0 || people.get(position).getHeader() != people.get(position - 1).getHeader();
-            }
-
-            @Override
-            public CharSequence getSectionHeader(int position) {
-                return people.get(position).getHeader();
-            }
-        };
     }
 }

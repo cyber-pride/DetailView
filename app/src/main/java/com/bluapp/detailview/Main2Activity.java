@@ -9,9 +9,9 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
-    private MainAdapter mainAdapter;
+    private Main2Adapter mainAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mRecyclerView = (RecyclerView) findViewById(R.id.list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mainAdapter = new MainAdapter(this,getData());
+        mainAdapter = new Main2Adapter(this,getData());
         mRecyclerView.setAdapter(mainAdapter);
 
         RecyclerSectionItemDecoration sectionItemDecoration = new RecyclerSectionItemDecoration(getResources().getDimensionPixelSize(R.dimen.header), true, getSectionCallback(getData()));
@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         list.add(new MainData("Topic Header 3", R.drawable.coin_xrp, "Title 2", "SubTitle 2"));
         list.add(new MainData("Topic Header 4", R.drawable.coin_etc, "Title 1", "SubTitle 1"));
         list.add(new MainData("Topic Header 4", R.drawable.coin_eth, "Title 2", "SubTitle 2"));
-        list.add(new MainData("Topic Header 5", R.drawable.coin_xrp, "Title 1", "SubTitle 1"));
-        list.add(new MainData("Topic Header 5", R.drawable.coin_ltc, "Title 2", "SubTitle 2"));
         return list;
     }
 
