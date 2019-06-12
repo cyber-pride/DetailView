@@ -24,6 +24,8 @@ public class Main2Activity extends AppCompatActivity {
 
         RecyclerSectionItemDecoration sectionItemDecoration = new RecyclerSectionItemDecoration(getResources().getDimensionPixelSize(R.dimen.header), true, getSectionCallback(getData()));
         mRecyclerView.addItemDecoration(sectionItemDecoration);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public ArrayList<MainData> getData() {
@@ -51,5 +53,11 @@ public class Main2Activity extends AppCompatActivity {
                 return people.get(position).getHeader();
             }
         };
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 }

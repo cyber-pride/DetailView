@@ -22,7 +22,7 @@ public class Main3Activity extends AppCompatActivity {
       //  mRecyclerView.addItemDecoration(new SpaceGrid(3, 10, true));
         mainAdapter = new Main3Adapter(Main3Activity.this, getData());
         mRecyclerView.setAdapter(mainAdapter);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 
@@ -41,5 +41,11 @@ public class Main3Activity extends AppCompatActivity {
         list.add(new MainData("Topic Header 5", R.drawable.coin_xrp, "Title 1", "SubTitle 1"));
         list.add(new MainData("Topic Header 5", R.drawable.coin_ltc, "Title 2", "SubTitle 2"));
         return list;
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 }

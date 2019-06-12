@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.addItemDecoration(sectionItemDecoration);
     }
 
+
     public ArrayList<MainData> getData() {
         ArrayList<MainData> list = new ArrayList<MainData>();
         list.add(new MainData("Topic Header 1", R.drawable.coin_btc, "Title 1", "SubTitle 1"));
@@ -40,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         list.add(new MainData("Topic Header 5", R.drawable.coin_ltc, "Title 2", "SubTitle 2"));
         return list;
     }
-
     private RecyclerSectionItemDecoration.SectionCallback getSectionCallback(final List<MainData> people) {
         return new RecyclerSectionItemDecoration.SectionCallback() {
             @Override
