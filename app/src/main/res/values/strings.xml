@@ -13,6 +13,7 @@
         \n\nQuisque augue diam, convallis nec mollis in, placerat nec elit. Aliquam non erat tristique, consequat tortor ultricies, sodales erat. Aliquam quis enim eu nulla facilisis sollicitudin eu mollis mauris. Donec ornare urna non libero volutpat tempus. Mauris elementum egestas ex, a laoreet urna. Ut a magna mattis, sodales massa a, blandit justo. Nunc placerat ante quis lacus dictum dictum vitae eu nisi. Fusce quis est sodales justo sollicitudin mollis. Suspendisse posuere, augue a ultricies lacinia, tortor tortor faucibus purus, pulvinar suscipit erat orci varius arcu. Phasellus id nisl vitae eros dignissim consectetur. Ut ac ex ac arcu vestibulum sagittis sit amet a massa.
         \n\nSuspendisse elit libero, placerat vel ipsum vitae, tristique faucibus nulla. Aliquam ac elit porttitor, vestibulum turpis nec, bibendum dui. Vivamus quam orci, consequat in scelerisque id, dignissim vel purus. Proin rhoncus ante eu nisi dictum lacinia. Proin congue tempor nunc, eu semper elit tincidunt ut. Duis vehicula purus at lorem sollicitudin porttitor. Nulla facilisi. Donec non dapibus neque. Donec neque massa, sodales vitae eros nec, lacinia vestibulum neque. Nullam venenatis vitae tortor sed fermentum. Aenean massa enim, placerat eu ligula quis, tincidunt rutrum purus. Ut tincidunt egestas varius.
     </string>
+    <string name="welcome">Welcome</string>
 
 
 </resources>

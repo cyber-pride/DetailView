@@ -14,13 +14,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Detail3Activity"></activity>
-        <activity android:name=".Main3Activity" />
-        <activity android:name=".Detail2Activity" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".DetailActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".WelcomeActivity">
+        <activity
+            android:name=".Detail3Activity"
+            android:label="Detail View 3"/>
+        <activity
+            android:name=".Main3Activity"
+            android:label="Collection View"/>
+        <activity
+            android:name=".Detail2Activity"
+            android:label="Detail View 2"/>
+        <activity
+            android:name=".Main2Activity"
+            android:label="Activity 2"/>
+        <activity
+            android:name=".DetailActivity"
+            android:label="Detail View 1"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="Activity 1"/>
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
